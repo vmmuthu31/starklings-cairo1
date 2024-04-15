@@ -131,6 +131,8 @@ cargo run -r --bin starklings run new_exercise
 4. Check that the [tests](#testing) pass.
 5. Send your PR!
 
+just reflecting changes
+
 ### Updating Rust logic/Cairo version
 
 1. [Test](#testing) your changes.
