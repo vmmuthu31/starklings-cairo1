@@ -1,4 +1,3 @@
-// starknet3.cairo
 // Joe liked Jill's work very much. He really likes how useful storage can be.
 // Now they decided to write a contract to track the number of exercises they
 // complete successfully. Jill says they can use the owner code and allow
@@ -20,12 +19,13 @@ trait IProgressTracker<TContractState> {
 mod ProgressTracker {
     use starknet::ContractAddress;
     use starknet::get_caller_address; // Required to use get_caller_address function
-
+    use starknet::storage::{StoragePointerReadAccess, StoragePointerWriteAccess, StoragePathEntry, Map};
+    
     #[storage]
     struct Storage {
         contract_owner: ContractAddress,
-        // TODO: Set types for LegacyMap
-        progress: LegacyMap<>
+        // TODO: Set types for Map
+        progress: Map<>
     }
 
     #[constructor]
@@ -54,15 +54,7 @@ mod ProgressTracker {
 #[cfg(test)]
 mod test {
     use starknet::ContractAddress;
-    use array::ArrayTrait;
-    use array::SpanTrait;
-    use debug::PrintTrait;
-    use traits::TryInto;
     use starknet::syscalls::deploy_syscall;
-    use core::result::ResultTrait;
-
-    use starknet::Felt252TryIntoContractAddress;
-    use option::OptionTrait;
     use super::IProgressTrackerDispatcher;
     use super::IProgressTrackerDispatcherTrait;
     use super::ProgressTracker;

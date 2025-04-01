@@ -1,11 +1,6 @@
-// arrays3.cairo
 // Make me compile and pass the test!
-// Execute `starklings hint arrays3` or use the `hint` watch subcommand for a hint.
 
 // I AM NOT DONE
-
-use array::ArrayTrait;
-use option::OptionTrait;
 
 fn create_array() -> Array<felt252> {
     let a = ArrayTrait::new(); // something to change here...

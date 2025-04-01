@@ -1,12 +1,7 @@
-// arrays2.cairo
 // Your task is to make the test pass without modifying the `create_array` function.
 // Make me compile and pass the test!
-// Execute `starklings hint arrays2` or use the `hint` watch subcommand for a hint.
 
 // I AM NOT DONE
-
-use array::ArrayTrait;
-use option::OptionTrait;
 
 // Don't modify this function
 fn create_array() -> Array<felt252> {

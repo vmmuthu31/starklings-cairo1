@@ -1,4 +1,3 @@
-// starknet2.cairo
 // Joe's contract in the last exercise showed that Joe is the owner of the contract.
 // He thanks you for helping him out!
 // Jill says that contract should allow setting the owner when contract is deployed.
@@ -38,19 +37,10 @@ trait IJillsContract<TContractState> {
 
 #[cfg(test)]
 mod test {
-    use starknet::ContractAddress;
-    use array::ArrayTrait;
-    use array::SpanTrait;
-    use debug::PrintTrait;
-    use traits::TryInto;
     use starknet::syscalls::deploy_syscall;
-    use option::OptionTrait;
-    use starknet::class_hash::Felt252TryIntoClassHash;
-    use core::result::ResultTrait;
     use super::IJillsContractDispatcher;
     use super::IJillsContractDispatcherTrait;
 
-    use starknet::Felt252TryIntoContractAddress;
     use super::JillsContract;
     #[test]
     #[available_gas(2000000000)]

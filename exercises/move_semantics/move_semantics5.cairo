@@ -1,10 +1,8 @@
-// move_semantics5.cairo
 // Make me compile only by reordering the lines in `main()`, but without
 // adding, changing or removing any of them.
-// Execute `starklings hint move_semantics5` or use the `hint` watch subcommand for a hint.
 
 // I AM NOT DONE
-use array::ArrayTrait;
+
 #[test]
 fn main() {
     let mut a = ArrayTrait::new();

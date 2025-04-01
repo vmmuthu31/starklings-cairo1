@@ -1,9 +1,6 @@
-// move_semantics6.cairo
-// Execute `starklings hint move_semantics6` or use the `hint` watch subcommand for a hint.
 // You can't change anything except adding or removing references.
 
 // I AM NOT DONE
-use debug::PrintTrait;
 
 #[derive(Drop)]
 struct Number {
@@ -27,5 +24,5 @@ fn get_value(number: Number) -> u32 {
 fn set_value(number: Number) {
     let value = 2222222;
     number = Number { value };
-    number.value.print();
+    println!("Number is: {}", number.value);
 }
